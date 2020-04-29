@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,user-scalable=no"
+    />
+    <title>RealNetworks产品指南</title>
+    <base href="<%= BASE_URL %>"/>
+    <link rel="icon" href="icon.jpg"/>
+    <script type="text/javascript">
+		// 解决安卓上的微信截取分享链接问题 
+		if (navigator.userAgent.includes('Android') && /redirect/.test(location.href)) {
+			location.href = decodeURIComponent(location.href.replace(/.*redirect=([^&]*).*/, '$1'));
+		}
+    </script>
+    <script type="text/javascript" src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script type="text/javascript"
+            src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+</head>
+<body>
+<noscript>
+    <strong>
+        We're sorry but national-land-space doesn't work properly without
+        JavaScript enabled. Please enable it to continue.
+    </strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+<script>
+	// //阻止左右翻页
+	// var xStart, xEnd, yStart, yEnd;
+	//
+	// document.getElementById('app').addEventListener("touchstart", function (evt) {
+	// 	xStart = evt.touches[0].pageX;
+	// 	yStart = evt.touches[0].pageY;
+	// }, false);
+	//
+	// document.getElementById('app').addEventListener('touchmove', function (evt) {
+	// 	xEnd = evt.touches[0].pageX;
+	// 	yEnd = evt.touches[0].pageY;
+	// 	//左右滑动
+	// 	if (Math.abs(xStart - xEnd) > Math.abs(yStart - yEnd)) {
+	// 		evt.preventDefault();
+	// 	}
+	// }, false);
+
+	// document.body.addEventListener('touchmove', function (e) {
+	// 	e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+	// }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+</script>
+</body>
+</html>
